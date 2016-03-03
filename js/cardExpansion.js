@@ -78,58 +78,58 @@ var card = (function(window, undefined){
    */
     Card.prototype._clipImageIn = function() {
         // Circle
-//        var tween = TweenLite.to(this._clip, 1, {
-//            attr: {
-//                r: 60
-//            },
-//            ease: Expo.easeInOut
-//        });
-//
-//        return tween;
+        var tween = TweenLite.to(this._clip, 1, {
+            attr: {
+                r: 60
+            },
+            ease: Expo.easeInOut
+        });
+
+        return tween;
         
-        // Polygon
-        var TL = new TimelineLite();
+//        // Polygon
+//        var TL = new TimelineLite();
+//        
+//        var start = [
+//            [0, 500],
+//            [0, 0],
+//            [1920, 0],
+//            [1920, 500]
+//        ];
+//        
+//        var end = [
+//            [1025, 330],
+//            [1117, 171],
+//            [828, 206],
+//            [913, 260]
+//        ];
+//        
+//        var points = [];
+//        
+//        // Create a tween for each point
+//        start.forEach(function(point, i){
+//            var tween = TweenLite.to(point, 1.5, end[i]);
+//            
+//            end[i].onUpdate = function(){
+//                points.push(point.join());
+//                
+//                // Every 4 point update clip-path
+//                if(points.length == end.length){
+//                    $(this._clip).attr('points', points.join(' '));
+//                    
+//                    // Reset
+//                    points = [];
+//                }
+//            }.bind(this);
+//            
+//            tween.vars.ease = Expo.easeInOut;
+//            
+//            // Add the tween for each point at the start of the timeline.
+//            TL.add(tween, 0);
+//            
+//        }, this);
         
-        var start = [
-            [0, 500],
-            [0, 0],
-            [1920, 0],
-            [1920, 500]
-        ];
-        
-        var end = [
-            [1025, 330],
-            [1117, 171],
-            [828, 206],
-            [913, 260]
-        ];
-        
-        var points = [];
-        
-        // Create a tween for each point
-        start.forEach(function(point, i){
-            var tween = TweenLite.to(point, 1.5, end[i]);
-            
-            end[i].onUpdate = function(){
-                points.push(point.join());
-                
-                // Every 4 point update clip-path
-                if(points.length == end.length){
-                    $(this._clip).attr('points', points.join(' '));
-                    
-                    // Reset
-                    points = [];
-                }
-            }.bind(this);
-            
-            tween.vars.ease = Expo.easeInOut;
-            
-            // Add the tween for each point at the start of the timeline.
-            TL.add(tween, 0);
-            
-        }, this);
-        
-        return TL;
+//        return TL;
     };
     
     /**
