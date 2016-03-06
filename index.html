@@ -8,11 +8,21 @@
 <link rel="stylesheet" href="css/mycss.css" type="text/css">
 <link rel="stylesheet" href="css/animate.min.css" type="text/css">
 <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" type="text/css">
-<script type="text/javascript" src="js/vendors/jquery-2.0.0.min.js"></script>
+<!--<script type="text/javascript" src="js/vendors/jquery-2.0.0.min.js"></script>-->
 <script type="text/javascript" src="js/vendors/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/vendors/cash.min.js"></script>
 <script type="text/javascript" src="js/vendors/trianglify.min.js"></script>
 <script type="text/javascript" src="js/vendors/ScrollToPlugin.min.js"></script>
 <script type="text/javascript" src="js/cardExpansion.js"></script>
+<script type="text/javascript" src="js/demo.js"></script>
+<script type="text/javascript">
+    var _log = console.log;
+    console.log = function(){
+        _log.call(console, '%c' + [].slice.call(arguments).join(''), 'color:transparent; text-shadow: 0 0 2px rgba(0,0,0,0.5);');
+    };
+    
+    console.log('hello, chacha!');
+</script>    
 </head>
 <body class="animated">
 <div class="container">
@@ -47,6 +57,37 @@
             </div>
         </div>
     </div>
+    <div class="card">
+        <div class="card_container">
+            <svg class="card_image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+                <!-- SVG image... -->
+                <defs>
+                    <clipPath id="clipPath1">
+                        <!-- r = 992 = hyp = Math.sqrt(960*960+250*250) -->
+                        <circle class="clip" cx="960" cy="250" r="992"></circle>
+                    </clipPath>
+                </defs>
+                <!-- the clip-path url reference to the id above -->
+                <image clip-path="url(#clipPath1)" width="1920" height="500" xlink:href="images/img.jpeg"></image>
+            </svg>
+            <div class="card_content">
+                <i class="card_btn-close fa fa-times"></i>
+                <div class="card_caption">
+                    <h2 class="card_title">Title...</h2>
+                    <p class="card_subtitle">Subtitle...</p>
+                </div>
+                <p class="card_copy">
+                    Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit 
+                </p>
+                <p class="card_copy">
+                    Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit 
+                </p>
+                <p class="card_copy">
+                    Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit 
+                </p>
+            </div>
+        </div>
+    </div>    
 </div>
 </body>
 </html>

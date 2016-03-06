@@ -1,6 +1,6 @@
 'use strict';
 
-var card = (function(window, undefined){
+var Card = (function(window, undefined){
     
     /**
    * Enum of CSS selectors.
@@ -51,7 +51,7 @@ var card = (function(window, undefined){
         this._TL.add(slideContentDown);
         this._TL.add(clipImageIn, 0);
         this._TL.add(floatContainer, '-=' + clipImageIn.duration() * 0.6);
-         this._TL.add(clipImageOut, '-=' + floatContainer.duration() * 0.3);
+        this._TL.add(clipImageOut, '-=' + floatContainer.duration() * 0.3);
         this._TL.add(slideContentUp, '-=' + clipImageOut.duration() * 0.6);
         
         this.isOpen = true;
@@ -64,7 +64,7 @@ var card = (function(window, undefined){
    * @private
    */
     Card.prototype._slideContentDown = function() {
-        var tween = TweenLite.to(this._content, 0.8 {
+        var tween = TweenLite.to(this._content, 0.8, {
             y: window.innerHeight,
             ease: Expo.easeInOut                     
         });
@@ -206,7 +206,7 @@ var card = (function(window, undefined){
    * @private
    */
     Card.prototype._slideContentUp = function(){
-q       var tween = TweenLite.to(this._content, 1 {
+        var tween = TweenLite.to(this._content, 1, {
             y: 0,
             clearProps: 'all',
             ease: Expo.easeInOut                     
