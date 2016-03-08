@@ -12,8 +12,8 @@ var demo = (function(window, undefined){
     var SELECTORS = {
         pattern: '.pattern',
         card: '.card',
-        cardImage: '.cardImage',
-        cardClose: '.cardClose'
+        cardImage: '.card_image',
+        cardClose: '.card_btn-close'
     };
     
     /**
@@ -48,12 +48,12 @@ var demo = (function(window, undefined){
             height: window.innerHeight,
             cell_size: 90,
             variance: 1,
-            stroke_width: 0.6,
+            stroke_width: 0.5,
             color_function: function(x, y){
-                return '#de6551';
+                return '#7cc576';
             }
         }).svg(); //Render as svg
-    
+
         _mapPolygons(pattern);
     
         _bindCards();
@@ -109,7 +109,7 @@ var demo = (function(window, undefined){
             var cardClose = $(card).find(SELECTORS.cardClose);
             
             cardImage.on('click', _playSequence.bind(this, true, i));
-            cardClose.on('close', _playSequence.bind(this, false, i));
+            cardClose.on('click', _playSequence.bind(this, false, i));
         });     
     };
     
@@ -122,7 +122,7 @@ var demo = (function(window, undefined){
    *
    */
     function _playSequence(isOpenClick, id, e){
-        var card = layout[i].card;
+        var card = layout[id].card;
         
         // Prevent when card already open and user click on image.
         if(card.isOpen && isOpenClick) return;
@@ -221,7 +221,6 @@ var demo = (function(window, undefined){
 })(window);
 
 // Start demo
-console.log(demo);
 window.onload = demo.init;
 
 

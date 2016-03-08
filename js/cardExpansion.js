@@ -139,7 +139,7 @@ var Card = (function(window, undefined){
    */
     Card.prototype._floatContainer = function(callback){
         
-        $(document.body).css('overflow', 'hidden');
+        $(document.body).addClass(CLASSESS.bodyHidden);
 
         var TL = new TimelineLite;
 
@@ -164,7 +164,7 @@ var Card = (function(window, undefined){
         });
 
         // Tween the container (and the track values) to full screen (end point).
-        TL.to([this.container, track], 2, {
+        TL.to([this._container, track], 2, {
             width: windowW,
             height: '100%',
             x: windowW / 2,
@@ -172,7 +172,7 @@ var Card = (function(window, undefined){
             xPercent: -50,
             ease: Expo.easeInOut,
             clearProps: 'all',
-            className: '-=' + CLASSES.containerClosed,
+            className: '-=' + CLASSESS.containerClosed,
             onUpdate: callback.bind(this, track)
         });
 
