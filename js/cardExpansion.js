@@ -172,8 +172,8 @@ var Card = (function(window, undefined){
             xPercent: -50,
             ease: Expo.easeInOut,
             clearProps: 'all',
-            className: '-=' + CLASSESS.containerClosed
-//            onUpdate: callback.bind(this, track)
+            className: '-=' + CLASSESS.containerClosed,
+            onUpdate: callback.bind(this, track)
         });
 
         return TL;
