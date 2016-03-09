@@ -173,7 +173,13 @@ var Card = (function(window, undefined){
             ease: Expo.easeInOut,
             clearProps: 'all',
             className: '-=' + CLASSESS.containerClosed,
-//            onUpdate: callback.bind(this, track)
+            onUpdate: callback.bind(this, track),
+            // Fix IE: if the image is set to fixed when CLASSES.containerClosed
+            // is removed IE doesn't follow the tween, fix by setting
+            // the image position to fixed when tween is completed.
+            onComplete: function() {
+                $(this._container).addClass('card_container-fix-image');
+            }.bind(this)
         });
 
         return TL;

@@ -212,12 +212,12 @@ var demo = (function(window, undefined){
         var isInside = Math.pow(xp - xc, 2) + Math.pow(yp - yc, 2) <= d;
         
         return isInside;
-    }
+    };
     
     // Expose methods.
     return {
         init: init
-    }
+    };
     
 })(window);
 
