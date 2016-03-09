@@ -48,10 +48,11 @@ var demo = (function(window, undefined){
             height: window.innerHeight,
             cell_size: 90,
             variance: 1,
-            stroke_width: 0.5,
-            color_function: function(x, y){
-                return '#7cc576';
-            }
+            stroke_width: 1,
+            x_colors: 'Purples'
+//            color_function: function(x, y){
+//                return '#7cc576';
+//            }
         }).svg(); //Render as svg
 
         _mapPolygons(pattern);

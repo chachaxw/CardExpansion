@@ -87,7 +87,7 @@ var Card = (function(window, undefined){
 
         return tween;
         
-//        // Polygon
+        // Polygon
 //        var TL = new TimelineLite();
 //        
 //        var start = [
@@ -128,7 +128,7 @@ var Card = (function(window, undefined){
 //            TL.add(tween, 0);
 //            
 //        }, this);
-        
+//        
 //        return TL;
     };
     
@@ -173,7 +173,7 @@ var Card = (function(window, undefined){
             ease: Expo.easeInOut,
             clearProps: 'all',
             className: '-=' + CLASSESS.containerClosed,
-            onUpdate: callback.bind(this, track)
+//            onUpdate: callback.bind(this, track)
         });
 
         return TL;
